@@ -35,6 +35,4 @@ var Constructor = document.registerElement(${tagName}, {
   prototype: proto
 });
 
-module.exports = function () {
-  return new Constructor();
-};
+module.exports = Constructor;

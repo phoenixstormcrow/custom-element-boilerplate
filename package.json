@@ -1,6 +1,7 @@
 {
-  "name": "custom-element-boilerplate",
-  "version": "1.0.0",
+  "name": "web-component",
+  "version": "0.0.1",
+  "private": "true",
   "description": "A somewhat opinionated custom html element boilerplate and generator.",
   "main": "index.js",
   "keywords": [
@@ -14,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/phoenixstormcrow/custom-element-boilerplate.git"
+    "url": "https://github.com/phoenixstormcrow/web-component.git"
   },
   "author": "K. P. MacGregor <phoenixstormcrow@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phoenixstormcrow/custom-element-boilerplate/issues"
+    "url": "https://github.com/phoenixstormcrow/web-component/issues"
   },
-  "homepage": "https://github.com/phoenixstormcrow/custom-element-boilerplate",
+  "homepage": "https://github.com/phoenixstormcrow/web-component",
   "dependencies": {
     "babel-core": "^4.7.16"
   }

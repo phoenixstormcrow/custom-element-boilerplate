@@ -1,4 +1,10 @@
-/* ${tagName}
+/* ${name} version ${version}
+
+   ${description}
+
+   copyright (c) ${year} ${author}
+
+   ${license} license.
 */
 
 'use strict';
@@ -31,7 +37,7 @@ proto.attributeChangedCallback = function (attr, old, new_) {
 };
 
 
-var Constructor = document.registerElement(${tagName}, {
+var Constructor = document.registerElement(${name}, {
   prototype: proto
 });
 

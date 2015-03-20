@@ -21,6 +21,6 @@ fs.readFile('package.json', 'utf8', function (err, result) {
   }
 
   //pipe index.js through preprocess
-  rs.pipe(preprocess(pkg.name))
+  rs.pipe(preprocess(pkg))
     .pipe(ws);
 });

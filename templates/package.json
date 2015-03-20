@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "devDependencies": {
+    "babel": "^4.7.16",
+    "browserify": "^9.0.3",
+    "jshint": "^2.6.3",
+    "tape": "^3.5.0",
+    "watchify": "^2.4.0",
+    "webcomponents.js": "^0.5.5-1"
+  }
+}

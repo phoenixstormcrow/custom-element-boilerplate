@@ -4,6 +4,7 @@
   "private": "true",
   "description": "A somewhat opinionated custom html element boilerplate and generator.",
   "main": "index.js",
+  "bin": "bin/web-component.js",
   "keywords": [
     "web-components",
     "boilerplate",
@@ -17,13 +18,17 @@
     "type": "git",
     "url": "https://github.com/phoenixstormcrow/web-component.git"
   },
-  "author": "K. P. MacGregor <phoenixstormcrow@gmail.com>",
+  "author": {
+    "name": "K. P. MacGregor",
+    "email": "phoenixstormcrow@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/phoenixstormcrow/web-component/issues"
   },
   "homepage": "https://github.com/phoenixstormcrow/web-component",
   "dependencies": {
-    "babel-core": "^4.7.16"
+    "babel-core": "^4.7.16",
+    "fs-extra": "^0.16.5"
   }
 }

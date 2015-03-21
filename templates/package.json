@@ -3,6 +3,7 @@
   "version": "",
   "description": "",
   "main": "index.js",
+  "private": "true",
   "scripts": {
     "lint": "jshint index.js lib/*.js"
   },

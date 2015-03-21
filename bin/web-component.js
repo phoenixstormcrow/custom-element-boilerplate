@@ -3,6 +3,7 @@
 /* perform the following steps
 
 * set working directory X
+* create directory structure
 * write out package.json to wd
 * run npm init
 * preprocess our templates
@@ -37,14 +38,15 @@ function checkExit (cmd, status) {
 }
 
 function getPkg() {
-  var pkg = fs.readFileSync('package.json', 'utf8');
-  return JSON.parse(pkg);
+  return JSON.parse(fs.readFileSync('package.json', 'utf8'));
 }
 
 checkExit('npm init', spawn('npm', ['init'], {stdio: 'inherit'}).status);
 
+var context = getPkg();
+context.year = (new Date()).getFullYear();
 var s = fs.createReadStream('index.js', {encoding: 'utf8'})
-  .pipe(preprocess(getPkg()))
+  .pipe(preprocess(context))
   .pipe(fs.createWriteStream(tempDir + '/index.js', {encoding: 'utf8'}))
   .on('finish', function () {
     fs.copySync(tempDir + '/index.js', cwd + '/index.js');

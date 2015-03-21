@@ -42,7 +42,6 @@ function getPkg() {
 }
 
 checkExit('npm init', spawn('npm', ['init'], {stdio: 'inherit'}).status);
-checkExit('npm install', spawn('npm', ['install'], {stdio: 'inherit'}).status);
 
 var s = fs.createReadStream('index.js', {encoding: 'utf8'})
   .pipe(preprocess(getPkg()))
@@ -51,5 +50,7 @@ var s = fs.createReadStream('index.js', {encoding: 'utf8'})
     fs.copySync(tempDir + '/index.js', cwd + '/index.js');
     fs.removeSync(tempDir);
   });
+
+checkExit('npm install', spawn('npm', ['install'], {stdio: 'inherit'}).status);
 
 console.log('OK!');

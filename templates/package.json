@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "jshint index.js lib/*.js"
   },
   "keywords": [
     "web-components"

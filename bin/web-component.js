@@ -16,7 +16,7 @@ var os = require('os'),
     fs = require('fs-extra'),
     path = require('path'),
     spawn = require('child_process').spawnSync,
-    preprocess = require('../lib/preprocess'),
+    interpolate = require('es6-interpolate-stream'),
     cwd = process.cwd(),
     templateDir = path.normalize(__dirname + '/../templates'),
     tempDir = cwd + '/.tmp';
@@ -46,7 +46,7 @@ checkExit('npm init', spawn('npm', ['init'], {stdio: 'inherit'}).status);
 var context = getPkg();
 context.year = (new Date()).getFullYear();
 var s = fs.createReadStream('index.js', {encoding: 'utf8'})
-  .pipe(preprocess(context))
+  .pipe(interpolate(context))
   .pipe(fs.createWriteStream(tempDir + '/index.js', {encoding: 'utf8'}))
   .on('finish', function () {
     fs.copySync(tempDir + '/index.js', cwd + '/index.js');

@@ -27,8 +27,9 @@
   },
   "homepage": "https://github.com/phoenixstormcrow/web-component",
   "dependencies": {
-    "babel-core": "^4.7.16",
+    "async": "^0.9.0",
     "es6-interpolate-stream": "^1.0.2",
-    "fs-extra": "^0.16.5"
+    "fs-extra": "^0.16.5",
+    "nomnom": "^1.8.1"
   }
 }

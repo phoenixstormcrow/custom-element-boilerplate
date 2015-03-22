@@ -37,7 +37,7 @@ proto.attributeChangedCallback = function (attr, old, new_) {
 };
 
 
-var Constructor = document.registerElement(${name}, {
+var Constructor = document.registerElement('${name}', {
   prototype: proto
 });
 
